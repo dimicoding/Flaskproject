@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for details in company %}
+<div class="row featurette">
+    {% if loop.index % 2 != 0 %}
+            
+            <div class="col-md-7">
+                <h3>{{ details.name }}</h3>
+                <p>{{ details.description }}</p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ details.image_source }}" alt="" class="featurette-image image-responsive">
+            </div>
+
+            <hr class="featurette-divider">
+    {% else %}
+            <div class="col-md-5">
+                <img src="{{ details.image_source }}" alt="" class="featurette-image image-responsive">
+            </div>
+            <div class="col-md-7">
+                <h3>{{ details.name }}</h3>
+                <p>{{ details.description }}</p>
+            </div>
+            <hr class="featurette-divider">
+    {% endif %}
+</div>
+{% endfor %}
+
+{% endblock %}
