@@ -6,7 +6,7 @@
     {% if loop.index % 2 != 0 %}
             
             <div class="col-md-7">
-                <h3>{{ details.name }}</h3>
+                <h3> <a href="/about/{{ details.url}}">{{ details.name }}</a></h3>
                 <p>{{ details.description }}</p>
             </div>
             <div class="col-md-5">
@@ -19,7 +19,7 @@
                 <img src="{{ details.image_source }}" alt="" class="featurette-image image-responsive">
             </div>
             <div class="col-md-7">
-                <h3>{{ details.name }}</h3>
+                <h3> <a href="/about/{{ details.url}}">{{ details.name }}</a></h3>
                 <p>{{ details.description }}</p>
             </div>
             <hr class="featurette-divider">
